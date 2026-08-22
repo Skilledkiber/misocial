@@ -1,0 +1,35 @@
+include components/variables.pug
+include components/mixins.pug
+
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/styles.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet")
+        title Document
+    body
+        header
+            .flex.header-content
+                .flex.logo
+                    picture
+                        img(src="img/logo.png" alt="Logo")
+                    h1 MISOCIAL
+                +nav-menu(menu)
+            .header-sekt
+                p.social SOCIAL MARKETING & ANALYTICS   
+                h2 Pricing Table
+                p.lorem Lorem ipsum dolor sit amet consectetur adipisicing <br> elit, sed do eiusmod tempor incididunt ut.
+                button.arrow-button#main
+                    span.arrow
+        main
+            .plans
+                .select
+                    p.text-pl MISOCIAL
+                    h2 Select Plan
+                    p.s-lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+            +card(plans)

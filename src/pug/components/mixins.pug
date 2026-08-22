@@ -1,0 +1,24 @@
+mixin nav-menu(items)
+    nav.flex.nav-menu
+        ul.ul-menu
+            for item in items
+                li
+                    a.nav-link(href=item.url)= item.name
+        a(href="#" class="btn") GET STARTED
+
+mixin card(items)
+    .cards
+        for item in items
+            figure.figure
+                figcaption
+                    picture
+                        source(srcset=item.img type="image/webp")
+                        source(srcset=item.img type="image/png")
+                        img.card-image(src=item.img alt=item.alt)
+                    p.pers Personal
+                    p.card-price
+                        span.price= item.price 
+                            span.sup $
+                        span.month /month               
+                    p.card-description= item.description
+                    a.btn-card(href=item.url) Select Plan

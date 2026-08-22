@@ -1,0 +1,266 @@
+*
+    margin: 0
+    box-sizing: border-box
+    text-decoration: none
+
+html 
+    font-size: 1px
+
+ul
+    padding: 0
+    list-style: none
+
+.flex
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+header
+    background-image: url("../img/header-bg.png")
+    background-size: cover
+    background-position: center
+    color: #ffffff
+
+.header-content
+    padding: 50px
+
+.logo h1
+    font-size: 30rem
+    margin-left: 15px
+    letter-spacing: 6px
+    line-height: 29px
+    color: #ffffff
+    font-weight: 400
+    font-family: "Maven Pro"
+
+.ul-menu
+    display: inline-flex
+    // justify-content: right
+    align-items: center
+    gap: 30px
+
+.nav-menu
+    gap: 30px
+    
+
+
+.ul-menu a
+    font-size: 16rem
+    color: #ffffff
+    font-weight: 400
+    font-family: "Maven Pro"
+
+.btn
+    font-size: 12rem
+    letter-spacing: 1px
+    line-height: 32px
+    text-transform: uppercase
+    color: #ffffff
+    font-weight: 400
+    font-family: "Maven Pro"
+    text-align: center
+    padding: 8px 31px
+    border-radius: 25px    
+    border: 1px solid #ffffff
+
+.header-sekt
+    padding: 7vw 0 5vw 0
+    text-align: center
+
+.social
+    position: relative
+    display: inline-block
+    margin-bottom: 25px
+    font-size: 14rem
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #ffffff
+    text-align: center
+    font-weight: 400
+    font-family: "Maven Pro"
+
+.social::before,
+.social::after
+    content: ""
+    position: absolute
+    top: 50%
+    display: block
+    width: 25px
+    height: 1px
+    background-color: #ffffff
+
+.social::before
+    left: -35px
+
+.social::after
+    right: -35px
+
+.header-sekt h2
+    font-size: 86rem
+    margin-bottom: 25px
+    letter-spacing: -3px
+    color: #ffffff
+    font-weight: 400
+    line-height: 79px
+    font-family: "Maven Pro"
+    text-align: center
+
+.lorem
+    font-size: 16rem
+    color: #ffffff
+    line-height: 30px
+    font-weight: 400
+    font-family: "Maven Pro"
+    text-align: center
+
+.arrow-button
+    width: 64px
+    height: 64px
+    margin-top: 13vw
+    border-radius: 32px
+    background-color: #ffffff
+    border: none
+
+.arrow
+    position: relative
+    display: inline-block
+    width: 10px
+    height: 10px
+    border-top: 2px solid #9fa4af
+    border-right: 2px solid #9fa4af
+    transform: rotate(135deg)  
+
+.arrow:before
+    content: ""
+    position: absolute
+    width: 2px
+    height: 14px
+    top: -2.3px
+    right: 4px
+    background-color: #9fa4af
+    transform: rotate(45deg)
+
+.arrow-button:hover
+    background-color: #6e45e2
+    cursor: pointer
+    transition: 0.3s ease
+    .arrow
+        border-color: #ffffff
+        transition: 0.3s ease
+        &:before
+            background-color: #ffffff
+            transition: 0.3s ease
+
+.select
+    padding-top: 50px
+    text-align: center
+
+.text-pl
+    font-size: 14rem
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #9fa4af
+    font-weight: 400
+    font-family: "Maven Pro"
+
+.select h2
+    font-size: 60rem
+    letter-spacing: -2px
+    color: #4f4f6f
+    font-weight: 400
+    font-family: "Maven Pro"
+
+.s-lorem 
+    margin: 0 auto
+    max-width: 380px
+    font-size: 16rem
+    line-height: 28px
+    color: #9fa4af
+    font-weight: 400
+    font-family: "Maven Pro"
+
+.cards
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    gap: 30px
+
+.figure 
+    width: 440px
+    margin-top: 100px
+    padding: 60px 72px
+    border-radius: 30px
+    background-color: #ffffff
+    border: 1px solid #d7dbe8
+    transition: 0.3s ease
+    cursor: pointer
+    picture
+        display: inline-block
+        height: 110px
+    &:hover
+        filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
+        border-color: white
+        
+
+.pers
+    margin-top: 50px
+    font-size: 14rem
+    letter-spacing: 1px
+    line-height: 32px
+    text-transform: uppercase
+    color: #9fa4af
+    font-weight: 400
+    font-family: "Maven Pro"
+
+.card-price
+    font-size: 60rem
+    letter-spacing: -2px
+    line-height: 72px
+    color: #4f4f6f
+    font-weight: 500
+    font-family: "Maven Pro"
+    text-align: center
+
+    .month
+        font-size: 20rem
+
+    .price
+        position: relative
+        
+    .sup
+        position: absolute
+        top: -12px
+        right: 100%
+        font-size: 20rem
+
+.card-description
+    min-height: 112rem
+    margin-top: 25px
+    margin-bottom: 60px
+    font-size: 16rem
+    line-height: 28px
+    color: #9fa4af
+    font-weight: 400
+    font-family: "Maven Pro"
+    text-align: center
+
+.btn-card
+    display: inline-block
+    min-width: 190rem
+    font-size: 12rem
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #c2c9db
+    font-weight: 400
+    font-family: "Maven Pro"
+    text-align: center
+    padding: 17px
+    border-radius: 25px
+    filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
+    background-color: #ffffff
+    border: 1px solid #d7dbe8
+    transition: 0.3s ease
+    &:hover
+        color: #ffffff
+        background-color: #6e45e2
