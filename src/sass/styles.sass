@@ -182,13 +182,14 @@ header
 .cards
     display: flex
     justify-content: center
+    flex-wrap: wrap
     align-items: center
+    padding: 100rem 0
     text-align: center
     gap: 30px
 
 .figure 
     width: 440px
-    margin-top: 100px
     padding: 60px 72px
     border-radius: 30px
     background-color: #ffffff
@@ -264,3 +265,54 @@ header
     &:hover
         color: #ffffff
         background-color: #6e45e2
+
+.data
+    background-image: url("../img/background.png")
+    background-size: cover
+    background-position: center
+    text-align: center
+    padding: 180rem 0
+    .social1
+        display: inline-block
+        font-size: 14rem
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: #ffffff
+        text-align: center
+        font-weight: 400
+        font-family: "Maven Pro"
+    h2 
+        font-size: 60px
+        letter-spacing: -2px
+        margin: 15px 0
+        line-height: 72px
+        color: #ffffff
+        font-weight: 400
+        font-family: "Maven Pro"
+
+.buttons
+    display: flex
+    justify-content: center
+    gap: 10px
+
+
+.get 
+    display: inline-block
+    border-radius: 25px
+    min-width: 190rem
+    padding: 15px
+    filter: drop-shadow(0 0 10.5px rgba(204,204,223,0.5))
+    background-color: #ffffff
+    border: 1px solid #d7dbe8
+    font-size: 12px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #c2c9db
+    font-weight: 400
+    font-family: "Maven Pro"
+    cursor: pointer
+    transition: 0.3s ease
+    &:hover
+        color: #ffffff
+        background-color: #6e45e2
+        border: 1px solid #6e45e2
