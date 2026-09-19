@@ -1,6 +1,8 @@
 mixin nav-menu(items)
     nav.flex.nav-menu
-        ul.ul-menu
+        .hamburger#hamburger
+            span
+        ul.ul-menu#text-top
             for item in items
                 li
                     a.nav-link(href=item.url)= item.name

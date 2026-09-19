@@ -19,25 +19,49 @@ html(lang="en")
                     picture
                         img(src="img/logo.png" alt="Logo")
                     h1 MISOCIAL
+                
                 +nav-menu(menu)
             .header-sekt
-                p.social SOCIAL MARKETING & ANALYTICS   
+                p.social SOCIAL MARKETING &amp; ANALYTICS   
                 h2 Pricing Table
                 p.lorem Lorem ipsum dolor sit amet consectetur adipisicing <br> elit, sed do eiusmod tempor incididunt ut.
-                button.arrow-button#main
+                a(href="#plans").arrow-button#main
                     span.arrow
         main
-            .plans
+            .plans#plans
                 .select
                     p.text-pl MISOCIAL
                     h2 Select Plan
                     p.s-lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
             +card(plans)
-            .data
-                p.social1 SOCIAL MARKETING & ANALYTICS
+            .data#data
+                p.social1 SOCIAL MARKETING &amp; ANALYTICS
                 h2 Take control of your data
                 p.buttons
                     a.get Get Started
                     a.get Explore Features
 
         footer
+            .wrapper
+                .flex.footer-content
+                    .flex.logo
+                        picture
+                            img(src="img/logo.png" alt="Logo")
+                        h2 MISOCIAL
+                    +nav-menu(menu)
+                hr
+                .flex.copyright
+                    p.copy &copy; 2017 Mass Impressions &amp; Tranmautritam. Make the right impression.
+                    .footer-svgs
+                        a.social-link
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><path d="M6.75 10.22V16.2H10.01V10.22H12.45L12.95 7.47H10.01V6.49C10.01 5.04 10.58 4.48 12.06 4.48C12.52 4.48 12.88 4.49 13.1 4.52V2.02C12.7 1.91 11.71 1.8 11.14 1.8C8.14 1.8 6.75 3.22 6.75 6.28V7.47H4.89V10.22H6.75Z"/></svg>
+                        a.social-link
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><path d="M14.72 6.07C14.73 6.19 14.73 6.32 14.73 6.45C14.73 10.35 11.76 14.85 6.33 14.85C4.66 14.85 3.11 14.36 1.8 13.52C2.04 13.55 2.27 13.56 2.51 13.56C3.9 13.56 5.16 13.09 6.18 12.3C4.88 12.27 3.79 11.42 3.42 10.25C3.6 10.28 3.78 10.3 3.97 10.3C4.24 10.3 4.5 10.26 4.75 10.2C3.4 9.92 2.39 8.73 2.39 7.3V7.26C2.78 7.48 3.23 7.62 3.72 7.64C2.92 7.11 2.4 6.2 2.4 5.18C2.4 4.63 2.55 4.13 2.8 3.69C4.26 5.48 6.44 6.65 8.89 6.78C8.85 6.56 8.82 6.33 8.82 6.1C8.82 4.47 10.13 3.15 11.77 3.15C12.62 3.15 13.38 3.51 13.92 4.08C14.59 3.95 15.23 3.71 15.8 3.37C15.58 4.06 15.11 4.63 14.5 5 15.1 4.93 15.67 4.77 16.2 4.54C15.8 5.12 15.29 5.64 14.72 6.07Z"/></svg>
+                        a.social-link
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><path d="M10.86 8.23C10.91 8.5 10.95 8.77 10.95 9.13C10.95 12.21 8.88 14.4 5.77 14.4C2.78 14.4 0.37 11.98 0.37 9C0.37 6.02 2.78 3.6 5.77 3.6C7.23 3.6 8.44 4.13 9.38 5.01L7.92 6.42C7.52 6.04 6.82 5.59 5.77 5.59 C3.92 5.59 2.42 7.11 2.42 9C2.42 10.89 3.92 12.41 5.77 12.41C7.9 12.41 8.7 10.87 8.83 10.08H5.77V8.23H10.86ZM16.08 8.41V6.84H14.5V8.41H12.94V9.98H14.5V11.55H16.08V9.98H17.65V8.41H16.08Z"/></svg>
+                        a.social-link
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="currentColor"><path d="M9.01 5.77C7.22 5.76 5.77 7.21 5.77 8.99C5.76 10.78 7.21 12.23 8.99 12.23C10.78 12.24 12.23 10.79 12.23 9.01C12.24 7.22 10.79 5.77 9.01 5.77ZM8.99 6.9C10.15 6.9 11.09 7.83 11.1 8.99C11.1 10.15 10.17 11.09 9.01 11.1C7.85 11.1 6.91 10.17 6.9 9.01C6.9 7.85 7.83 6.91 8.99 6.9ZM11.62 5.63C11.62 5.22 11.96 4.88 12.37 4.88C12.79 4.88 13.13 5.22 13.13 5.63C13.13 6.05 12.79 6.39 12.37 6.39C11.96 6.39 11.62 6.05 11.62 5.63ZM15.27 6.4C15.22 5.39 14.99 4.5 14.25 3.76C13.51 3.02 12.62 2.79 11.61 2.74C10.57 2.68 7.45 2.68 6.41 2.74C5.4 2.79 4.51 3.02 3.77 3.75C3.03 4.49 2.8 5.39 2.75 6.39C2.69 7.44 2.69 10.56 2.75 11.6C2.8 12.61 3.03 13.5 3.77 14.24C4.51 14.98 5.4 15.21 6.41 15.26C7.45 15.31 10.57 15.31 11.61 15.26C12.62 15.21 13.51 14.98 14.25 14.24C14.99 13.5 15.22 12.61 15.27 11.6C15.33 10.56 15.33 7.44 15.27 6.4ZM13.92 12.71C13.7 13.26 13.28 13.69 12.72 13.91C11.89 14.24 9.93 14.16 9.01 14.16C8.09 14.16 6.12 14.24 5.29 13.91C4.74 13.69 4.32 13.26 4.1 12.71C3.77 11.88 3.84 9.91 3.84 8.99C3.84 8.08 3.77 6.11 4.1 5.28C4.32 4.73 4.74 4.3 5.29 4.08C6.12 3.75 8.09 3.83 9.01 3.83C9.93 3.83 11.9 3.75 12.72 4.08C13.28 4.3 13.7 4.73 13.92 5.28C14.25 6.11 14.18 8.08 14.18 8.99C14.18 9.91 14.25 11.88 13.92 12.71Z"/></svg>
+
+        script(src="js/scripts.js")
+
+

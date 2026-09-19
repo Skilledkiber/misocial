@@ -1,10 +1,19 @@
+@import components/mixins
+
 *
     margin: 0
     box-sizing: border-box
     text-decoration: none
+    scroll-behavior: smooth
 
 html 
-    font-size: 1px
+    font-size: 0.8px
+    +media(960)
+        font-size: 1px
+
+.body-mobile
+    overflow: hidden
+
 
 ul
     padding: 0
@@ -14,7 +23,7 @@ ul
     display: flex
     justify-content: space-between
     align-items: center
-
+    flex-wrap: wrap
 header
     background-image: url("../img/header-bg.png")
     background-size: cover
@@ -22,33 +31,109 @@ header
     color: #ffffff
 
 .header-content
-    padding: 50px
+    padding: 25px 15px
+    justify-content: space-around
+    +media(433)
+        justify-content: space-between
+    gap: 10px
+    +media(971)
+        padding: 50rem
+
+.logo
+    flex-wrap: nowrap
 
 .logo h1
     font-size: 30rem
     margin-left: 15px
     letter-spacing: 6px
-    line-height: 29px
     color: #ffffff
-    font-weight: 400
+    font-weight: 500
     font-family: "Maven Pro"
 
+.hamburger
+    display: block
+    margin-top: 15px
+    width: 30px
+    height: 20px
+    cursor: pointer
+    z-index: 10
+    +media(960)
+        display: none
+    span
+        position: relative
+        display: inline-block
+        width: 100%
+        height: 3px
+        background-color: #ffffff
+        &::before
+            content: ""
+            display: inline-block
+            width: 100%
+            height: 3px
+            top: -8px
+            background-color: #ffffff
+            position: absolute
+        &::after
+            content: ""
+            display: inline-block
+            width: 100%
+            height: 3px
+            top: 8px
+            background-color: #ffffff
+            position: absolute
+        
+.hamburgerOpen 
+   position: absolute
+   top: 25px
+   right: 15px
+   +media(971)
+        top: 50rem
+        right: 50rem
+
+.hamburgerOpen span:before 
+   transform: rotate(45deg)
+   top: 0
+
+
+.hamburgerOpen span:after
+   transform: rotate(-45deg)
+   top: 0
+
+
+.hamburgerOpen span 
+   background-color: transparent
+
+
 .ul-menu
-    display: inline-flex
-    // justify-content: right
+    display: none
     align-items: center
     gap: 30px
+    +media(960)
+        display: inline-flex
 
 .nav-menu
     gap: 30px
-    
-
-
+        
 .ul-menu a
     font-size: 16rem
     color: #ffffff
     font-weight: 400
     font-family: "Maven Pro"
+
+.textTopOpen 
+    position: absolute
+    width: 100%
+    height: 100vh
+    top: 0px
+    left: 0
+    padding: 15px
+    background-color: rgba(96, 66, 216, 0.95)
+    display: block
+    
+    z-index: 9
+    a
+        font-size: 50rem
+        line-height: 1.8em
 
 .btn
     font-size: 12rem
@@ -62,10 +147,23 @@ header
     padding: 8px 31px
     border-radius: 25px    
     border: 1px solid #ffffff
+    +media(960)
+        justify-content: center
 
 .header-sekt
-    padding: 7vw 0 5vw 0
+    padding: 7vw 15px 5vw
     text-align: center
+    h2
+        font-size: 70rem
+        margin-bottom: 25px
+        letter-spacing: -3px
+        color: #ffffff
+        font-weight: 400
+        line-height: 79px
+        font-family: "Maven Pro"
+        text-align: center
+        +media(380)
+            font-size: 86rem
 
 .social
     position: relative
@@ -95,16 +193,6 @@ header
 .social::after
     right: -35px
 
-.header-sekt h2
-    font-size: 86rem
-    margin-bottom: 25px
-    letter-spacing: -3px
-    color: #ffffff
-    font-weight: 400
-    line-height: 79px
-    font-family: "Maven Pro"
-    text-align: center
-
 .lorem
     font-size: 16rem
     color: #ffffff
@@ -114,8 +202,8 @@ header
     text-align: center
 
 .arrow-button
-    width: 64px
-    height: 64px
+    display: inline-block
+    padding: 27px
     margin-top: 13vw
     border-radius: 32px
     background-color: #ffffff
@@ -151,6 +239,9 @@ header
             background-color: #ffffff
             transition: 0.3s ease
 
+.plans, .data
+    padding: 0 15px
+
 .select
     padding-top: 50px
     text-align: center
@@ -184,13 +275,15 @@ header
     justify-content: center
     flex-wrap: wrap
     align-items: center
-    padding: 100rem 0
+    padding: 100rem 15px
     text-align: center
     gap: 30px
 
 .figure 
-    width: 440px
-    padding: 60px 72px
+    max-width: 440px
+    padding: 60rem 20rem
+    +media(440)
+        padding: 60rem 72rem
     border-radius: 30px
     background-color: #ffffff
     border: 1px solid #d7dbe8
@@ -271,7 +364,7 @@ header
     background-size: cover
     background-position: center
     text-align: center
-    padding: 180rem 0
+    padding: 180rem 15px
     .social1
         display: inline-block
         font-size: 14rem
@@ -282,7 +375,9 @@ header
         font-weight: 400
         font-family: "Maven Pro"
     h2 
-        font-size: 60px
+        font-size: 55rem
+        +media(380)
+            font-size: 60rem
         letter-spacing: -2px
         margin: 15px 0
         line-height: 72px
@@ -294,6 +389,7 @@ header
     display: flex
     justify-content: center
     gap: 10px
+    flex-wrap: wrap
 
 
 .get 
@@ -316,3 +412,69 @@ header
         color: #ffffff
         background-color: #6e45e2
         border: 1px solid #6e45e2
+
+.wrapper
+    padding: 50rem 50rem 25rem 50rem
+
+.footer-content
+    padding-bottom: 30px
+    color: #37374a
+    justify-content: center
+    gap: 20px
+    +media(432)
+        justify-content: space-between
+        gap: 10px
+    h2
+        font-size: 30rem
+        margin-left: 15px
+        letter-spacing: 6px
+        color: #37374a
+        font-weight: 500
+        font-family: "Maven Pro"
+    .nav-link
+        color: #37374a
+        &:hover
+            color: #6e45e2
+    .btn
+        background-color: #6e45e2
+        border: 1px solid #6e45e2
+        transition: 0.3s ease
+        &:hover
+            background-color: #ffffff
+            color: #6e45e2
+
+hr
+    opacity: 0.200
+
+.copyright
+    padding-top: 30px
+    justify-content: center
+    gap: 10px
+    +media(660)
+        justify-content: space-between
+    .copy
+        opacity: 0.502
+        font-size: 14px
+        line-height: 19px
+        color: #6a6a77
+        font-weight: 400
+        font-family: "Maven Pro"
+    .footer-svgs
+        display: flex
+        gap: 20px
+        a
+            cursor: pointer
+
+
+@media screen and (max-width: 960px)
+    footer
+        justify-content: center
+        .btn
+            text-align: center
+
+    .logo
+        justify-content: center
+        text-align: center
+    
+            
+
